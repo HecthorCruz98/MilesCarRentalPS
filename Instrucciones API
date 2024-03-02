@@ -1,0 +1,7 @@
+Para ejecutar el proyecto es necesario tener en cuenta lo siguiente
+1. En el repositorio se creó un backup de la
+base de datos. 
+2. Se crearon los cruds para todas las tablas con el fin
+de que se pudiera ver y entender la estructura a nivel
+de base de datos del proyecto
+3.El proyecto se creo con Entity Framework core
