@@ -12,7 +12,7 @@ namespace MilesCarRental.Application.Features.TipoDocumento.Queries.ListTipoDocu
     {
         public ListTipoDocumentoQuery(int? id)
         {
-            id = Id;
+            Id = id;
 
         }
         public int? Id { get; set; }

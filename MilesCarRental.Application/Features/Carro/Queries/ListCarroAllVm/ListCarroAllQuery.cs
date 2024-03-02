@@ -12,10 +12,10 @@ namespace MilesCarRental.Application.Features.Carro.Queries.ListCarroAllVm
     {
         public ListCarroAllQuery(int? idLocalidadRecogida, int? idLocalidadDevolucion, int? idCliente, int? idEstadoAlquiler)
         {
-            idLocalidadRecogida = IdLocalidadRecogida;
-            idLocalidadDevolucion = IdLocalidadDevolucion;
-            idCliente = IdCliente;
-            idEstadoAlquiler = IdEstadoAlquiler;
+            IdLocalidadRecogida = idLocalidadRecogida;
+            IdLocalidadDevolucion = idLocalidadDevolucion;
+            IdCliente = idCliente;
+            IdEstadoAlquiler = idEstadoAlquiler;
 
         }
         public int? IdLocalidadRecogida { get; set; }

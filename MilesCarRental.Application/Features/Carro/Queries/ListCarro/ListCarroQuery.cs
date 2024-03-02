@@ -12,7 +12,7 @@ namespace MilesCarRental.Application.Features.Carro.Queries.ListCarro
     {
         public ListCarroQuery(int? id)
         {
-            id = Id;
+            Id = id;
 
         }
         public int? Id { get; set; }
