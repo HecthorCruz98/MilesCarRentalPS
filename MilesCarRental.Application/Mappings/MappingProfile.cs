@@ -34,6 +34,7 @@ namespace MilesCarRental.Application.Mappings
             CreateMap<CreateCarroCommand, Carro>();
             CreateMap<UpdateCarroCommand, Carro>();
             CreateMap<Carro, CarroVm>();
+            CreateMap<Carro, CarroAllVm>();
 
             CreateMap<CreateClienteCommand, Cliente>();
             CreateMap<UpdateClienteCommand, Cliente>();
