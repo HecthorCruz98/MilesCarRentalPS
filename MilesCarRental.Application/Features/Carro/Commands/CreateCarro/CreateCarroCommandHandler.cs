@@ -31,14 +31,14 @@ namespace MilesCarRental.Application.Features.Carro.Commands.CreateCarro
             _logger = logger;
         }
         /// <summary>
-        /// Metodo de valñidacion e insercion de datos en la tabla carro
+        /// Metodo de validacion e insercion de datos en la tabla carro
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<bool> Handle(CreateCarroCommand request, CancellationToken cancellationToken)
         {
-            var VerifiData = await _unitOfWork.Repository<MilesCarRental.Domain.Carro>().GetFirstOrDefaultAsync(x => x.Chasis == request.Chasis);
+            var VerifiData = await _unitOfWork.Repository<Domain.Carro>().GetFirstOrDefaultAsync(x => x.Chasis == request.Chasis);
 
             bool resp = false;
             if (VerifiData == null)
@@ -47,7 +47,7 @@ namespace MilesCarRental.Application.Features.Carro.Commands.CreateCarro
                 var EntityAdd = await _unitOfWork.Repository<Domain.Carro>().AddAsync(Entity);
                 var Response = _mapper.Map<Domain.Carro>(EntityAdd);
 
-                _logger.LogInformation($"La factura fue creada con el id {EntityAdd.Id}");
+                _logger.LogInformation($"El registro fue creado con el id {EntityAdd.Id}");
 
 
                 return resp = true;
@@ -55,7 +55,7 @@ namespace MilesCarRental.Application.Features.Carro.Commands.CreateCarro
             }
             else
             {
-                _logger.LogInformation($"El carro no fue creado");
+                _logger.LogInformation($"El registro del carro no fue creado");
 
                 return resp = false;
             }
