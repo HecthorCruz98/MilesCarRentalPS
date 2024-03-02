@@ -21,6 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{2D5F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApi", "TestWebApi\TestWebApi.csproj", "{A219CDFF-35AA-4FF6-B923-4B48A954E9FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasedeDatos", "BasedeDatos", "{AD224E0E-5EAC-481A-B197-EC10E1995709}"
+	ProjectSection(SolutionItems) = preProject
+		BasedeDatos\db_MilesCarRental.bak = BasedeDatos\db_MilesCarRental.bak
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
