@@ -29,7 +29,7 @@ namespace MilesCarRental.Application.Features.Cliente.Queries.ListCliente
         {
             if (request.Id != null)
             {
-                var entity = await _unitOfWork.Repository<Domain.Carro>().GetAsync(x => x.Id == request.Id);
+                var entity = await _unitOfWork.Repository<Domain.Cliente>().GetAsync(x => x.Id == request.Id);
                 var entityVm = _mapper.Map<List<ClienteVm>>(entity);
 
                 return entityVm;
@@ -37,7 +37,7 @@ namespace MilesCarRental.Application.Features.Cliente.Queries.ListCliente
             }
             else
             {
-                var entity = await _unitOfWork.Repository<Domain.Carro>().GetAllAsync();
+                var entity = await _unitOfWork.Repository<Domain.Cliente>().GetAllAsync();
                 var entityVm = _mapper.Map<List<ClienteVm>>(entity);
 
                 return entityVm;

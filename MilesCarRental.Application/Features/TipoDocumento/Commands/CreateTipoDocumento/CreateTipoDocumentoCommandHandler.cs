@@ -37,7 +37,7 @@ namespace MilesCarRental.Application.Features.TipoDocumento.Commands.CreateTipoD
             {
                 var Entity = _mapper.Map<Domain.TipoDocumento>(request);
                 var EntityAdd = await _unitOfWork.Repository<Domain.TipoDocumento>().AddAsync(Entity);
-                var Response = _mapper.Map<Domain.Carro>(EntityAdd);
+                var Response = _mapper.Map<Domain.TipoDocumento>(EntityAdd);
 
                 _logger.LogInformation($"El registro fue creado con el id {EntityAdd.Id}");
 

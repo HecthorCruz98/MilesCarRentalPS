@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MilesCarRental.Application.Contracts;
 using MilesCarRental.Application.Features.EstadoAlquiler.Commands.CreateEstadoAlquiler;
 using MilesCarRental.Application.Features.EstadoAlquiler.Commands.UpdateEstadoAlquiler;
+using MilesCarRental.Application.Features.EstadoAlquiler.Query.ListEstadoAlquiler;
 using MilesCarRental.Application.Features.TipoDocumento.Commands.CreateTipoDocumento;
 using MilesCarRental.Application.Features.TipoDocumento.Commands.UpdateTipoDocumento;
 using MilesCarRental.Application.Features.TipoDocumento.Queries.ListTipoDocuemnto;
@@ -40,7 +41,7 @@ namespace MilesCarRental.WebApi.Controllers
         [HttpGet("GetEstadoAlquiler")]
         public async Task<ActionResult<IEnumerable<EstadoAlquilerVm>>> GetEstadoAlquiler(int? Id)
         {
-            var query = await _mediator.Send(new ListTipoDocumentoQuery(Id));
+            var query = await _mediator.Send(new ListEstadoAlquilerQuery(Id));
             return Ok(query);
         }
         /// <summary>
